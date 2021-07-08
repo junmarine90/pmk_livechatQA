@@ -2,6 +2,10 @@
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <style>
+	.embeddedServiceHelpButton .helpButton .uiButton {
+		width: 100px; !important
+	}
+
     #liveAgentChatLog {
         border: 1px solid #000000;
         height: 300px;
@@ -55,7 +59,6 @@
         embedded_svc.settings.displayHelpButton = true; //Or false
         embedded_svc.settings.language = 'ko'; //For example, enter 'en' or 'en-US'
         embedded_svc.settings.defaultMinimizedText = ' ';	// LiveChat
-		embedded_svc.settings.widgetWidth = "100px"
 		
         //embedded_svc.settings.disabledMinimizedText = ''; //(Defaults to Agent Offline)
 

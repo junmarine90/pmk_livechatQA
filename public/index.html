@@ -39,6 +39,7 @@
             전화: <input type='text' id="phone" value=""/><br/>
 	    이메일: <input type='text' id="email" value=""/><br/>
             출생년도: <input type='text' id="" value=""/><br/>
+	    문의 사항: <input type='text' id="subject" value=""/><br/>
 	    <input type='checkbox' id="" value=""/>대한민국에 거주하는 만 19세 이상의 성인 흡연자이며 한국필립모리스㈜ / 필립모리스 인터내셔널 매니지먼트 SA (PMIM SA) 개인정보처리 방침에 동의합니다.
 			
         </div>
@@ -54,7 +55,7 @@
     var initESW = function (gslbBaseURL) {
         embedded_svc.settings.displayHelpButton = false; //Or false
         embedded_svc.settings.language = 'ko'; //For example, enter 'en' or 'en-US'
-        embedded_svc.settings.defaultMinimizedText = 'LiveChat';
+        embedded_svc.settings.defaultMinimizedText = '';	// LiveChat
 
         //embedded_svc.settings.disabledMinimizedText = '...'; //(Defaults to Agent Offline)
 
@@ -153,6 +154,11 @@
                 {
                     "label": "Email",
                     "value": document.getElementById('email').value,
+                    "displayToAgent": true
+                },
+		{
+                    "label": "Subject",
+                    "value": document.getElementById('subject').value,
                     "displayToAgent": true
                 }
 

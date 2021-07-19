@@ -42,7 +42,6 @@
             성명: <input type='text' id="lastName" value=""/><br/>
             전화: <input type='text' id="phone" value=""/><br/>
 	    이메일: <input type='text' id="email" value=""/><br/>
-            출생년도: <input type='text' id="" value=""/><br/>
 	    <input type='checkbox' id="" value=""/>대한민국에 거주하는 만 19세 이상의 성인 흡연자이며 한국필립모리스㈜ / 필립모리스 인터내셔널 매니지먼트 SA (PMIM SA) 개인정보처리 방침에 동의합니다.
 			
         </div>
@@ -79,8 +78,8 @@
         embedded_svc.settings.entryFeature = 'LiveAgent';
 
         embedded_svc.init(
-            'https://pmi-e--qa.my.salesforce.com',
-            'https://qa-pmk.cs117.force.com/survey',
+            'https://pmi-e.my.salesforce.com',
+			'https://pmk.secure.force.com/survey',
             gslbBaseURL,
             '00D1m0000008mvR',
             'Chat_Agents',
@@ -97,7 +96,7 @@
     };
     if (!window.embedded_svc) {
         var s = document.createElement('script');
-        s.setAttribute('src', 'https://pmi-e--qa.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+		s.setAttribute('src', 'https://pmi-e.my.salesforce.com/embeddedservice/5.0/esw.min.js');
         s.onload = function () {
             initESW(null);
         };

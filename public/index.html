@@ -78,8 +78,8 @@
         embedded_svc.settings.entryFeature = 'LiveAgent';
 
         embedded_svc.init(
-            'https://pmi-e--qa.my.salesforce.com',
-            'https://qa-pmk.cs117.force.com/survey',
+            'https://pmi-e.my.salesforce.com',
+			'https://pmk.secure.force.com/survey',
             gslbBaseURL,
             '00D1m0000008mvR',
             'Chat_Agents',
@@ -96,7 +96,7 @@
     };
     if (!window.embedded_svc) {
         var s = document.createElement('script');
-        s.setAttribute('src', 'https://pmi-e--qa.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+		s.setAttribute('src', 'https://pmi-e.my.salesforce.com/embeddedservice/5.0/esw.min.js');
         s.onload = function () {
             initESW(null);
         };

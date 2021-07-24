@@ -42,6 +42,7 @@
             성명: <input type='text' id="lastName" value=""/><br/>
             전화: <input type='text' id="phone" value=""/><br/>
 	    이메일: <input type='text' id="email" value=""/><br/>
+            출생년도: <input type='text' id="" value=""/><br/>
 	    <input type='checkbox' id="" value=""/>대한민국에 거주하는 만 19세 이상의 성인 흡연자이며 한국필립모리스㈜ / 필립모리스 인터내셔널 매니지먼트 SA (PMIM SA) 개인정보처리 방침에 동의합니다.
 			
         </div>
@@ -78,17 +79,17 @@
         embedded_svc.settings.entryFeature = 'LiveAgent';
 
         embedded_svc.init(
-            'https://pmi-e.my.salesforce.com',
-			'https://pmk.secure.force.com/survey',
+            'https://pmi-e--qa.my.salesforce.com',
+            'https://qa-pmk.cs117.force.com/survey',
             gslbBaseURL,
-            '00D5g000001DqWz',	// 여기수정
+            '00D1m0000008mvR',
             'Chat_Agents',
             {
                 baseLiveAgentContentURL: 'https://c.la2-c1cs-ukb.salesforceliveagent.com/content',
-                deploymentId: '5725g000000Pdfg',	// 여기수정
-                buttonId: '5735g000000Phf4',		// 여기수정
+                deploymentId: '5721m0000008OP1',
+                buttonId: '5731m0000008OO5',
                 baseLiveAgentURL: 'https://d.la2-c1cs-ukb.salesforceliveagent.com/chat',
-                eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I5g000000H7z5EAC_17aa89c2a81',	// 여기수정
+                eswLiveAgentDevName: 'Chat_Agents',
                 isOfflineSupportEnabled: false
             }
         );
@@ -96,7 +97,7 @@
     };
     if (!window.embedded_svc) {
         var s = document.createElement('script');
-		s.setAttribute('src', 'https://pmi-e.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+        s.setAttribute('src', 'https://pmi-e--qa.my.salesforce.com/embeddedservice/5.0/esw.min.js');
         s.onload = function () {
             initESW(null);
         };
@@ -254,7 +255,7 @@
 
             embedded_svc.liveAgentAPI.startChat({
                 directToAgentRouting: {
-                    buttonId: "5735g000000Phf4",
+                    buttonId: "5731m0000008OO5",
                     fallback: true
                 },
                 extraPrechatInfo: extraPrechatInfo,

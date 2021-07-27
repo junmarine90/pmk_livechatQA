@@ -29,6 +29,10 @@
             zoom: 1.2 !important;
         }
     }
+	
+	button[embeddedService-chatHeader_chatHeader] {
+		padding: 2px 5px !important;
+	}
 </style>
 <body>
 <div>
@@ -79,17 +83,17 @@
         embedded_svc.settings.entryFeature = 'LiveAgent';
 
         embedded_svc.init(
-            'https://pmi-e--qa.my.salesforce.com',
-            'https://qa-pmk.cs117.force.com/survey',
+            'https://pmi-e--qa.my.salesforce.com',		// QA
+            'https://qa-pmk.cs117.force.com/survey',	// QA
             gslbBaseURL,
-            '00D1m0000008mvR',
+            '00D1m0000008mvR',	// QA
             'Chat_Agents',
             {
                 baseLiveAgentContentURL: 'https://c.la2-c1cs-ukb.salesforceliveagent.com/content',
-                deploymentId: '5721m0000008OP1',
-                buttonId: '5731m0000008OO5',
+                deploymentId: '5721m0000008OP1',	// QA
+                buttonId: '5731m0000008OO5',		// QA
                 baseLiveAgentURL: 'https://d.la2-c1cs-ukb.salesforceliveagent.com/chat',
-                eswLiveAgentDevName: 'Chat_Agents',
+                eswLiveAgentDevName: 'Chat_Agents',	// QA
                 isOfflineSupportEnabled: false
             }
         );
@@ -255,7 +259,7 @@
 
             embedded_svc.liveAgentAPI.startChat({
                 directToAgentRouting: {
-                    buttonId: "5731m0000008OO5",
+                    buttonId: "5731m0000008OO5",	// QA
                     fallback: true
                 },
                 extraPrechatInfo: extraPrechatInfo,
